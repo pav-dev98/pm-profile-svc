@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package profile;
+
+service ProfileService {
+  rpc GetProfile (GetProfileRequest) returns (Profile);
+  rpc CreateProfile (CreateProfileRequest) returns (Profile);
+  rpc UpdateProfile (UpdateProfileRequest) returns (Profile);
+}
+
+message GetProfileRequest {
+  string user_id = 1;
+}
+
+message CreateProfileRequest {
+  string user_id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string bio = 4;
+}
+
+message UpdateProfileRequest {
+  string user_id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string bio = 4;
+}
+
+message Profile {
+  string id = 1;
+  string user_id = 2;
+  string first_name = 3;
+  string last_name = 4;
+  string bio = 5;
+}

@@ -12,7 +12,7 @@ export class Profile {
   id!: string;
 
   @Column({ unique: true })
-  userId!: string;
+  code!: string;
 
   @Column()
   firstName!: string;

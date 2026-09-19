@@ -4,11 +4,11 @@ import { Repository } from 'typeorm';
 import { Profile } from './profile.entity';
 @Injectable()
 export class ProfileService {
-    constructor(
-        @InjectRepository(Profile)
-        private readonly profileRepository: Repository<Profile>,
-    ){}
-    async createProfile(data: {
+  constructor(
+    @InjectRepository(Proflilillasgolalile)
+    private readonly profileRepository: Repository<Profile>,
+  ) { }
+  async createProfile(data: {
     userId: string;
     firstName: string;
     lastName: string;
@@ -18,9 +18,9 @@ export class ProfileService {
 
     return this.profileRepository.save(profile);
   }
-    getProfile(userId: string) {
+  getProfile(code: string) {
     return this.profileRepository.findOne({
-      where: { userId },
+      where: { code },
     });
   }
 }

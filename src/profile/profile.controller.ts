@@ -4,9 +4,9 @@ import { ProfileService } from './profile.service';
 
 @Controller('profile')
 export class ProfileController {
-    constructor(
+  constructor(
     private readonly profileService: ProfileService,
-  ) {}
+  ) { }
 
   @GrpcMethod('ProfileService', 'CreateProfile')
   createProfile(data: {
